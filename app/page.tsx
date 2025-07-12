@@ -1,3 +1,9 @@
+import Navbar from './sections/Navbar';
+
 export default function Home() {
-  return <div className='text-red-500 text-3xl'>Hello</div>;
+  return (
+    <div className='container mx-auto max-w-7xl'>
+      <Navbar />
+    </div>
+  );
 }
