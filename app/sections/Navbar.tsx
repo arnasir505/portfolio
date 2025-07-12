@@ -52,7 +52,7 @@ const Navbar = () => {
         <motion.div
           initial={{ opacity: 0, y: -5 }}
           animate={{ opacity: 1, y: 0 }}
-          style={{ maxHeight: '100dvh' }}
+          style={{ maxHeight: '100vh' }}
           transition={{ duration: 0.4 }}
           className='block overflow-hidden text-center sm:hidden'
         >
