@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { motion } from 'motion/react';
 
 const navigationLinks = [
   { href: '#home', label: 'Home' },
@@ -48,7 +49,13 @@ const Navbar = () => {
         </div>
       </div>
       {isOpen && (
-        <div className='block overflow-hidden text-center sm:hidden'>
+        <motion.div
+          initial={{ opacity: 0, y: -5 }}
+          animate={{ opacity: 1, y: 0 }}
+          style={{ maxHeight: '100dvh' }}
+          transition={{ duration: 0.4 }}
+          className='block overflow-hidden text-center sm:hidden'
+        >
           <nav className='pb-5'>
             <ul className='nav-ul'>
               {navigationLinks.map(({ href, label }) => (
@@ -60,7 +67,7 @@ const Navbar = () => {
               ))}
             </ul>
           </nav>
-        </div>
+        </motion.div>
       )}
     </div>
   );
