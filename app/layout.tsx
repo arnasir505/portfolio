@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Funnel_Display } from 'next/font/google';
 import './globals.css';
+import Script from 'next/script';
 
 const funnelDisplay = Funnel_Display({
   variable: '--font-funnel-display',
@@ -22,6 +23,11 @@ export default function RootLayout({
     <html lang='en' data-scroll-behavior='smooth'>
       <body className={`${funnelDisplay.variable} antialiased`}>
         {children}
+        <Script
+          src='https://louisabraham.github.io/nekojs/neko.js'
+          data-autostart=''
+          strategy='afterInteractive'
+        />
       </body>
     </html>
   );
